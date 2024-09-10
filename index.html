@@ -3,10 +3,194 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style></style>
+    <title>Resume</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+      }
+      body {
+        height: 100vh;
+        width: 100vw;
+        background-color: #f5f5f5;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      .section1 {
+        width: 50%;
+        height: 12rem;
+        background: #11998e;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #38ef7d, #11998e);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #38ef7d, #11998e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        box-shadow:
+  3.4px 3.4px 2.7px rgba(0, 0, 0, 0.059),
+  8.7px 8.7px 6.9px rgba(0, 0, 0, 0.084),
+  17.7px 17.7px 14.2px rgba(0, 0, 0, 0.106),
+  36.5px 36.5px 29.2px rgba(0, 0, 0, 0.131),
+  100px 100px 80px rgba(0, 0, 0, 0.19)
+;
+      }
+      .profile-img-section {
+        width: 40%;
+        height: 100%;
+        justify-content: end;
+        border-radius: 50%;
+      }
+      .profile-data {
+        width: 40%;
+        height: 20%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      .profile-img {
+        height: 3rem;
+        width: 4rem;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+      }
+      .section2 {
+        width: 50%;
+        height: 8rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+      }
+      .section3 {
+        width: 50%;
+        height: 10rem;
+        display: flex;
+        padding-left: 5px;
+        flex-direction: column;
+        justify-content: center;
+
+      }
+      .section-title {
+        color: rgb(46, 186, 139);
+      }
+      .ed-table {
+        width: 100%;
+        border: 1px solid black;
+        border-collapse: collapse;
+      }
+      th,
+      td {
+        padding: 2px;
+        border: 1px solid;
+      }
+      th{
+        background-color: #11998e;
+      }
+      .section4 {
+        width: 50%;
+        height: 10rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+      }
+      .company{
+        font-weight: bold;
+      }
+      .section5 {
+        width: 50%;
+        height: 13rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+      }
+      .section6 {
+        width: 50%;
+        height: 3rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background: #11998e;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #38ef7d, #11998e);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #38ef7d, #11998e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        
+        
+      }
+      li{
+        list-style: square;
+        margin-left: 2rem;
+      }
+    </style>
+   
 </head>
 <body>
-    Hello
+   <div class="section1">
+    <div class="profile-img-section"> 
+        <img src="" alt="Cat">
+    </div>
+    <div class="profile-data">
+        <h1>Bhavatarini  A S</h1>
+        <h6>bhavatariniselvan@gmail.com</h6>
+    </div>
+   </div>
+   <div class="section2">
+    <h1 class="section-title">
+        Objective
+    </h1><br>
+    <p>I am a highly driven, recent business school graduate seeking a full-time position in finance where I can lend my knowledge of market analytics to help your organisation improve profitability.</p>
+   </div>
+   <div class="section3">
+    <h1 class="section-title">
+        Education</h1>
+   
+    <table class="ed-table">
+        <tr>
+            <th>Degree</th>
+            <th>Campus</th>
+            <th>Score %</th>
+        </tr>
+        <tr>
+            <td>BE</td>
+            <td>school</td>
+            <td>75%</td>
+        </tr>
+        <tr>
+            <td>BE</td>
+            <td>school</td>
+            <td>75%</td>
+        </tr>
+        <tr>
+          <td>BE</td>
+          <td>school</td>
+          <td>75%</td>
+      </tr>
+    </table>
+   </div>
+   <div class="section4">
+    <h1 class="section-title">
+Internships
+    </h1>
+    <p><span class="company">ACCOUNT MANAGER</span> 2022 March for 10 years</p>
+
+   </div>
+   <div class="section5">
+    <div class="section-title color-primary"></div>
+    <h1 class="section-title">Skills</h1>
+    <ul>
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>JS</li>
+    </ul>
+   </div>
+   <div class="section6">
+
+   </div>
 </body>
 </html>
