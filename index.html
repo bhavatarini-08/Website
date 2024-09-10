@@ -5,192 +5,217 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resume</title>
     <style>
-      * {
-        margin: 0px;
-        padding: 0px;
-      }
-      body {
-        height: 100vh;
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        body {
+        height:100vh;
         width: 100vw;
+        overflow: scroll;
         background-color: #f5f5f5;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
       }
-      .section1 {
-        width: 50%;
-        height: 12rem;
-        background: #11998e;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #38ef7d, #11998e);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #38ef7d, #11998e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
-
-
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: row;
-        box-shadow:
-  3.4px 3.4px 2.7px rgba(0, 0, 0, 0.059),
-  8.7px 8.7px 6.9px rgba(0, 0, 0, 0.084),
-  17.7px 17.7px 14.2px rgba(0, 0, 0, 0.106),
-  36.5px 36.5px 29.2px rgba(0, 0, 0, 0.131),
-  100px 100px 80px rgba(0, 0, 0, 0.19)
+        .section1{
+            height:25rem;
+            width:50%;
+            background: #1D976C;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #93F9B9, #1D976C);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #93F9B9, #1D976C); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+color:black;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            
 ;
-      }
-      .profile-img-section {
-        width: 40%;
-        height: 100%;
-        justify-content: end;
-        border-radius: 50%;
-      }
-      .profile-data {
-        width: 40%;
-        height: 20%;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-      }
-      .profile-img {
-        height: 3rem;
-        width: 4rem;
-        border-radius: 50%;
-        display: flex;
-        justify-content: center;
-      }
-      .section2 {
-        width: 50%;
-        height: 8rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+        }
+        .profile-img-section{
+            width: 38%;
+            height: 90%;
+            height: 2rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .profile-img{
+            height: 5.5rem;
+            width: 40%;
+            border-radius:60%;
+        }
+        .profile-data{
+            width:50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+        }
+        .section-title{
+            color:#4fa56f;
+            font-size:1.5rem;
+        }
+        .section2{
+            height:20rem;
+            width:50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: start;
+        }
+        .section3{
+            height:22rem;
+            width:50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: start;
+        }
+        .ed-tab{
+            width: 100%;
+            border: 1.5px solid #4fa56f;
+            border-collapse: collapse;
+        }
+        th,td{
+            padding: 0.5rem;
+            border: 1.5px solid #4fa56f;
+        }
+        th{
+            background-color:#4fa56f;
+        }
+        .section4{
+            height:12rem;
+            width:50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: start;
+        }
+        .company{
+            font-weight: bold;
+        }
+        .section5{
+            height:20rem;
+            width:50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: start;
+        }
+        .section-list{
+            list-style:square;
+            margin-left: 2rem;
+        }
+        .section6{
+            height:8rem;
+            width:50%;
+            background: #1D976C;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #93F9B9, #1D976C);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #93F9B9, #1D976C); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
-      }
-      .section3 {
-        width: 50%;
-        height: 10rem;
-        display: flex;
-        padding-left: 5px;
-        flex-direction: column;
-        justify-content: center;
+            color: black;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            box-shadow:
+  2px 2px 1.6px rgba(0, 0, 0, 0.029),
+  4.5px 4.5px 3.6px rgba(0, 0, 0, 0.042),
+  7.9px 7.9px 6.3px rgba(0, 0, 0, 0.051),
+  12.5px 12.5px 10px rgba(0, 0, 0, 0.06),
+  19.3px 19.3px 15.5px rgba(0, 0, 0, 0.069),
+  30.1px 30.1px 24.1px rgba(0, 0, 0, 0.078),
+  50px 50px 40px rgba(0, 0, 0, 0.091),
+  100px 100px 80px rgba(0, 0, 0, 0.12)
+;
 
-      }
-      .section-title {
-        color: rgb(46, 186, 139);
-      }
-      .ed-table {
-        width: 100%;
-        border: 1px solid black;
-        border-collapse: collapse;
-      }
-      th,
-      td {
-        padding: 2px;
-        border: 1px solid;
-      }
-      th{
-        background-color: #11998e;
-      }
-      .section4 {
-        width: 50%;
-        height: 10rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-
-      }
-      .company{
-        font-weight: bold;
-      }
-      .section5 {
-        width: 50%;
-        height: 13rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-
-      }
-      .section6 {
-        width: 50%;
-        height: 3rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        background: #11998e;  /* fallback for old browsers */
-        background: -webkit-linear-gradient(to right, #38ef7d, #11998e);  /* Chrome 10-25, Safari 5.1-6 */
-        background: linear-gradient(to right, #38ef7d, #11998e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        }
+        .section7{
+            height:20rem;
+            width:50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: start;
+        }
         
-        
-      }
-      li{
-        list-style: square;
-        margin-left: 2rem;
-      }
     </style>
-   
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 </head>
+
 <body>
-   <div class="section1">
-    <div class="profile-img-section"> 
-        <img src="" alt="Cat">
-    </div>
-    <div class="profile-data">
+    <div class="section1">
+        <div class="profile-img-section">
+            <img src="https://w7.pngwing.com/pngs/101/287/png-transparent-computer-icons-nanny-template-job-desktop-avatar-woman-template-child-resume.png" alt="Photo" class="profile-img">
+        </div>
+        <div class="profile-data">
         <h1>Bhavatarini  A S</h1>
         <h6>bhavatariniselvan@gmail.com</h6>
+        </div>
     </div>
-   </div>
-   <div class="section2">
-    <h1 class="section-title">
-        Objective
-    </h1><br>
-    <p>I am a highly driven, recent business school graduate seeking a full-time position in finance where I can lend my knowledge of market analytics to help your organisation improve profitability.</p>
-   </div>
-   <div class="section3">
-    <h1 class="section-title">
-        Education</h1>
-   
-    <table class="ed-table">
-        <tr>
-            <th>Degree</th>
+    <div class="section2">
+        <h1 class="section-title">Objective</h1><br>
+    <p>Highly motivated student looking to gain work experience in a part-time role while pursuing academic studies</p>
+    </div>
+    <div class="section3">
+        <h1 class="section-title">Education <br>
+        </h1>
+        <table class="ed-tab">
+            <tr><th>Degree</th>
             <th>Campus</th>
-            <th>Score %</th>
+        <th>Percentage</th></tr>
+        <tr>
+            <td>B.E - CSE</td>
+            <td>SIET</td>
+            <td>89%</td>
         </tr>
         <tr>
-            <td>BE</td>
-            <td>school</td>
-            <td>75%</td>
+            <td>10th standard</td>
+            <td>Gedee Public school</td>
+            <td>85%</td>
         </tr>
         <tr>
-            <td>BE</td>
-            <td>school</td>
-            <td>75%</td>
+            <td>12th standard</td>
+            <td>Gedee Public school</td>
+            <td>87%</td>
         </tr>
-        <tr>
-          <td>BE</td>
-          <td>school</td>
-          <td>75%</td>
-      </tr>
-    </table>
-   </div>
-   <div class="section4">
-    <h1 class="section-title">
-Internships
-    </h1>
-    <p><span class="company">ACCOUNT MANAGER</span> 2022 March for 10 years</p>
-
-   </div>
-   <div class="section5">
-    <div class="section-title color-primary"></div>
-    <h1 class="section-title">Skills</h1>
-    <ul>
-      <li>HTML</li>
-      <li>CSS</li>
-      <li>JS</li>
-    </ul>
-   </div>
-   <div class="section6">
-
-   </div>
+        </table>
+    </div>
+    <div class="section4">
+        <h1 class="section-title">Internships</h1>
+        <p>Attended a internship on <span class="company">Simplain Software Solutions Private Limited - July 2024</span></p>
+    </div>
+    <div class="section5">
+        <h1 class="section-title">Skills</h1>
+        <div class="section-list">
+            <ul>
+                <li>HTML,CSS</li>
+                <LI>Basics of Java</LI>
+                <li>Basics of Excel</li>
+                <li>SQL</li>
+            </ul>
+        </div>
+    </div>
+    <div class="section7">
+      <h1 class="section-title">Certificates and Achievements</h1>
+      <div class="section-list"><ul>
+        <li>Learn SQL <span class="company"> - Unstop</span>&nbsp; <a href="https://d8it4huxumps7.cloudfront.net/lambda-pdfs/certificate-images/4c766d94-ceab-4253-a5cd-f543484404ad.pdf" target="_blank" rel="noopener noreferrer">(View Your Certiciate)</a></li>
+        <LI>Data Analytic 72 days Bootcamp <span class="company"> -Udemy</span></LI>
+      </ul>
+      </div>
+  </div>
+    <div class="section6">
+       <a href="tel:+91 6380860628"> <i class="fa-sharp-duotone fa-solid fa-phone"></i></a>
+        <a href="mailto:bhavatariniselvan@gmail.com"><i class="fa-sharp-duotone fa-solid fa-envelope"></i></a>
+        <a href="https://github.com/bhavatarini-08" target="_blank" rel="noopener noreferrer"><i class="fa-sharp-duotone fa-solid fa-user"></i></a>
+    </div>
+    
+    
 </body>
 </html>
