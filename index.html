@@ -98,7 +98,7 @@ border-radius: 50px;
             background-color:#4fa56f;
         }
         .section4{
-          height:100px;
+          height:120px;
             padding: 10px;
             width:70%;
             display: flex;
@@ -110,7 +110,7 @@ border-radius: 50px;
             font-weight: bold;
         }
         .section5{
-          height:100px;
+          height:200px;
             padding: 10px;
             width:70%;
             display: flex;
@@ -122,8 +122,14 @@ border-radius: 50px;
             list-style:square;
             margin-left: 2rem;
         }
+        .section-listol{
+            list-style:none;
+            margin-left: 2rem;
+            
+            
+        }
         .section6{
-          height:20px;
+          height:30px;
             padding: 10px;
             width:70%;
             background: #1D976C;  /* fallback for old browsers */
@@ -156,6 +162,17 @@ border-radius: 3px;
             justify-content: flex-start;
             align-items: start;
         }
+        
+        .section8{
+          height:110px;
+            padding: 10px;
+            width:70%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: start;
+        }
+
         .buttonphone{
  --color: white;
  padding: 0.8em 1.7em;
@@ -370,7 +387,77 @@ border-radius: 3px;
 									   color-stop(0.44, rgb(205, 206, 203)),
 									   color-stop(0.72, rgb(211, 216, 207)),
 									   color-stop(0.86, rgb(202, 205, 196)));
-}    </style>
+}  
+/*skillbarcss*/
+.container{
+  width: 400px;
+  /* margin: 0 auto; */
+}
+@keyframes load{
+  from {
+    width: 0%
+  }
+}
+@-webkit-keyframes load{
+  from {
+    width: 0%
+  }
+}
+@-moz-keyframes load{
+  from {
+    width: 0%
+  }
+}
+@-o-keyframes load{
+  from {
+    width: 0%
+  }
+}
+
+.skillbar{
+  background-color: #e5e5e5;
+  padding: 2px;
+  border-radius: 15px;
+  margin-bottom: 5px;
+  font-size: 14px;
+  color: black;
+  font-weight: bold;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+  &::before{
+    content:  attr(data-skill); 
+    display: inline-block;
+    padding: 5px 0 5px 10px;
+    border-radius: inherit;
+    animation: load 2s 0s;
+    -webkit-animation: load 2s 0s;
+    -moz-animation: load 2s 0s;
+    -o-animation: load 2s 0s;
+  } 
+
+  &.learning::before{
+    width: calc(20% - 14px);
+    background: #beefb1;
+  }
+  &.basic::before{
+    width: calc(40% - 14px);
+    background: #7be692;
+  }
+  &.intermediate::before{
+    width: calc(60% - 14px);
+    background: #7be692;;
+  }
+  &.advanced::before{
+    width: calc(80% - 14px);
+    background: #7be692;
+  }
+  &.expert::before{
+    width: calc(100% - 14px);
+    background: #4eca77;
+  }
+} 
+
+
+  </style>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -395,7 +482,7 @@ border-radius: 3px;
         </h1>
         <table class="ed-tab">
             <tr><th>Educational Qualification</th>
-            <th>Campus</th>
+            <th>Institution</th>
         <th>Score or CGPA</th></tr>
         <tr>
             <td>B.E - CSE</td>
@@ -416,18 +503,26 @@ border-radius: 3px;
     </div>
     <div class="section4">
         <h1 class="section-title">Internships</h1>
-        <span class="company">Simplain Software Solutions Private Limited - July 2024</span><p>During my internship at Simplain Software Solutions Private Limited, I gained valuable experience in both software development and data analysis. I worked closely with a team on projects involving SQL databases, where I contributed to data extraction and report generation. I played a role in optimizing SQL queries to improve the efficiency and performance of data retrieval processes.</p>
+        <span class="company">Simplain Software Solutions Private Limited - July 2024</span><br><p>During my internship at Simplain Software Solutions Private Limited, I gained valuable experience in both software development and data analysis. I worked closely with a team on projects involving SQL databases, where I contributed to data extraction and report generation. I played a role in optimizing SQL queries to improve the efficiency and performance of data retrieval processes.</p>
     </div>
     <div class="section5">
         <h1 class="section-title">Skills</h1>
-        <div class="section-list">
-            <ul>
-                <li>HTML,CSS</li>
-                <LI>Basics of Java</LI>
-                <li>Basics of Excel</li>
-                <li>SQL</li>
-            </ul>
+        <div class="container">
+          <div class="skillbar learning" data-skill="Java"></div>
+          <div class="skillbar basic" data-skill="JS"></div>
+          <div class="skillbar intermediate" data-skill="CSS"></div>
+          <div class="skillbar advanced" data-skill="HTML"></div>
+          <div class="skillbar expert" data-skill="SQL"></div> 
         </div>
+    </div>
+    <div class="section8">
+      <h1 class="section-title">Projects</h1>
+      <ol>
+        <div class="section-listol">
+        <li>Console based project in Java - <span class="company">Restaurant Management System</span></li>
+        <br><li><span class="company">Gesture recongition</span> using Machine Learning</li>
+        <br><li>Developed and Application using Flutter - <span class="company">Student Access Application</span></li>
+      </div> </ol>
     </div>
     <div class="section7">
       <h1 class="section-title">Certificates and Achievements</h1>
