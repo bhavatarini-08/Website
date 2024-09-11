@@ -10,10 +10,10 @@
             padding: 0px;
         }
         body {
-        height:100vh;
+            height: 100vh;
         width: 100vw;
         overflow: scroll;
-        background-color: #f5f5f5;
+        background-color: #fdfcfc;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -21,17 +21,18 @@
       }
 
         .section1{
-            height:25rem;
-            width:50%;
+            height:28rem;
+            width:70%;
             background: #1D976C;  /* fallback for old browsers */
 background: -webkit-linear-gradient(to right, #93F9B9, #1D976C);  /* Chrome 10-25, Safari 5.1-6 */
 background: linear-gradient(to right, #93F9B9, #1D976C); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-color:black;
+color:white;
             display: flex;
             flex-direction: row;
             justify-content: center;
             align-items: center;
-            
+            position: sticky;
+            top: 0;            
 ;
         }
         .profile-img-section{
@@ -43,9 +44,15 @@ color:black;
             align-items: center;
         }
         .profile-img{
-            height: 5.5rem;
-            width: 40%;
-            border-radius:60%;
+            height:3.5rem;
+            width: 26%;
+            /* border-radius:60%; */
+            background: rgba( 255, 255, 255, 0.5 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 8px );
+-webkit-backdrop-filter: blur( 8px );
+border-radius: 10px;
+border-radius: 50px;
         }
         .profile-data{
             width:50%;
@@ -59,16 +66,16 @@ color:black;
             font-size:1.5rem;
         }
         .section2{
-            height:20rem;
-            width:50%;
+            height:30rem;
+            width:70%;
             display: flex;
             flex-direction: column;
             justify-content: flex-start;
             align-items: start;
         }
         .section3{
-            height:22rem;
-            width:50%;
+            height:36rem;
+            width:70%;
             display: flex;
             flex-direction: column;
             justify-content: flex-start;
@@ -87,8 +94,8 @@ color:black;
             background-color:#4fa56f;
         }
         .section4{
-            height:12rem;
-            width:50%;
+            height:28rem;
+            width:70%;
             display: flex;
             flex-direction: column;
             justify-content: flex-start;
@@ -98,8 +105,8 @@ color:black;
             font-weight: bold;
         }
         .section5{
-            height:20rem;
-            width:50%;
+            height:48rem;
+            width:70%;
             display: flex;
             flex-direction: column;
             justify-content: flex-start;
@@ -110,8 +117,8 @@ color:black;
             margin-left: 2rem;
         }
         .section6{
-            height:8rem;
-            width:50%;
+            height:5rem;
+            width:70%;
             background: #1D976C;  /* fallback for old browsers */
 background: -webkit-linear-gradient(to right, #93F9B9, #1D976C);  /* Chrome 10-25, Safari 5.1-6 */
 background: linear-gradient(to right, #93F9B9, #1D976C); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
@@ -134,14 +141,230 @@ background: linear-gradient(to right, #93F9B9, #1D976C); /* W3C, IE 10+/ Edge, F
 
         }
         .section7{
-            height:20rem;
-            width:50%;
+            height:35rem;
+            width:70%;
             display: flex;
             flex-direction: column;
             justify-content: flex-start;
             align-items: start;
         }
-        
+        .buttonphone{
+ --color: white;
+ padding: 0.8em 1.7em;
+ background-color: transparent;
+ border-radius: .3em;
+ position: relative;
+ overflow: hidden;
+ cursor: pointer;
+ transition: .5s;
+ font-weight: 400;
+ font-size: 17px;
+ /* border: 1px solid; */
+ font-family: inherit;
+ text-transform: uppercase;
+ color: var(--color);
+ z-index: 1;
+}
+
+.buttonphone::before, .buttonphone::after {
+ content: '';
+ display: block;
+ width: 50px;
+ height: 50px;
+ transform: translate(-50%, -50%);
+ position: absolute;
+ border-radius: 50%;
+ z-index: -1;
+ background-color: var(--color);
+ transition: 1s ease;
+}
+
+.buttonphone::before {
+ top: -1em;
+ left: -1em;
+}
+
+.buttonphone::after {
+ left: calc(100% + 1em);
+ top: calc(100% + 1em);
+}
+
+.buttonphone:hover::before, .buttonphone:hover::after {
+ height: 410px;
+ width: 410px;
+}
+
+.buttonphone:hover {
+ color: rgb(10, 25, 30);
+}
+
+.buttonphone:active {
+ filter: brightness(.8);
+}
+.btn-github {
+  cursor: pointer;
+  display: flex;
+  gap: 0.5rem;
+  border: none;
+
+  transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+  border-radius: 100px;
+  font-weight: 800;
+  place-content: center;
+
+  padding: 0.75rem 1rem;
+  font-size: 0.825rem;
+  line-height: 1rem;
+
+  /* background-color: rgba(0, 0, 0, 0.4); */
+  box-shadow:
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.04),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.04);
+  color: #fff;
+}
+
+/* .btn-github:hover {
+   box-shadow:
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.08),
+    inset 0 0 0 1px rgba(252, 232, 3, 0.08);
+  color: #fce803; 
+  transform: translate(0, -0.25rem);
+  background-color: rgba(0, 0, 0, 0.5);
+} */ 
+ /* From Uiverse.io by satyamchaudharydev */ 
+.buttondown {
+  --width: 100px;
+  --height: 35px;
+  --tooltip-height: 35px;
+  --tooltip-width: 90px;
+  --gap-between-tooltip-to-button: 18px;
+  /* --button-color: #42dcb8; */
+  --tooltip-color: #fff;
+  width: var(--width);
+  height: var(--height);
+  background: var(--button-color);
+  position: relative;
+  text-align: center;
+  border-radius: 0.45em;
+  font-family: "Arial";
+  transition: background 0.3s;
+}
+
+.buttondown::before {
+  position: absolute;
+  content: attr(data-tooltip);
+  width: var(--tooltip-width);
+  height: var(--tooltip-height);
+  background-color: var(--tooltip-color);
+  font-size: 0.9rem;
+  color: #111;
+  border-radius: .25em;
+  line-height: var(--tooltip-height);
+  bottom: calc(var(--height) + var(--gap-between-tooltip-to-button) + 10px);
+  left: calc(50% - var(--tooltip-width) / 2);
+}
+
+.buttondown::after {
+  position: absolute;
+  content: '';
+  width: 0;
+  height: 0;
+  border: 10px solid transparent;
+  border-top-color: var(--tooltip-color);
+  left: calc(50% - 10px);
+  bottom: calc(100% + var(--gap-between-tooltip-to-button) - 10px);
+}
+
+.buttondown::after,.buttondown::before {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s;
+}
+
+.text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.buttondown-wrapper,.text,.icon {
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  color: #fff;
+}
+
+.text {
+  top: 0
+}
+
+.text,.icon {
+  transition: top 0.5s;
+}
+
+.icon {
+  color: #fff;
+  top: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.buttondown:hover {
+  background: #e8efed;
+}
+
+.buttondown:hover .text {
+  top: -100%;
+}
+
+.buttondown:hover .icon {
+  top: 0;
+}
+
+.buttondown:hover:before,.buttondown:hover:after {
+  opacity: 1;
+  visibility: visible;
+}
+
+.buttondown:hover:after {
+  bottom: calc(var(--height) + var(--gap-between-tooltip-to-button) - 20px);
+}
+
+.buttondown:hover:before {
+  bottom: calc(var(--height) + var(--gap-between-tooltip-to-button));
+}
+*:-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #F5F5F5;
+	border-radius: 10px;
+}
+
+*::-webkit-scrollbar
+{
+	width: 10px;
+	background-color: #F5F5F5;
+}
+*::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	background-image: -webkit-gradient(linear,
+									   left bottom,
+									   left top,
+									   color-stop(0.44, rgb(205, 206, 203)),
+									   color-stop(0.72, rgb(211, 216, 207)),
+									   color-stop(0.86, rgb(202, 205, 196)));
+}
+
+
     </style>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
@@ -205,16 +428,21 @@ background: linear-gradient(to right, #93F9B9, #1D976C); /* W3C, IE 10+/ Edge, F
     <div class="section7">
       <h1 class="section-title">Certificates and Achievements</h1>
       <div class="section-list"><ul>
-        <li>Learn SQL <span class="company"> - Unstop</span>&nbsp; <a href="https://d8it4huxumps7.cloudfront.net/lambda-pdfs/certificate-images/4c766d94-ceab-4253-a5cd-f543484404ad.pdf" target="_blank" rel="noopener noreferrer">(View Your Certiciate)</a></li>
+        <li>Learn SQL <span class="company"> - Unstop</span>&nbsp; <a href="https://d8it4huxumps7.cloudfront.net/lambda-pdfs/certificate-images/4c766d94-ceab-4253-a5cd-f543484404ad.pdf" target="_blank" class="buttondown" rel="noopener noreferrer">Download</a></li>
         <LI>Data Analytic 72 days Bootcamp <span class="company"> -Udemy</span></LI>
       </ul>
       </div>
   </div>
     <div class="section6">
-       <a href="tel:+91 6380860628"> <i class="fa-sharp-duotone fa-solid fa-phone"></i></a>
-        <a href="mailto:bhavatariniselvan@gmail.com"><i class="fa-sharp-duotone fa-solid fa-envelope"></i></a>
-        <a href="https://github.com/bhavatarini-08" target="_blank" rel="noopener noreferrer"><i class="fa-sharp-duotone fa-solid fa-user"></i></a>
+       <a href="tel:+91 6380860628" class="buttonphone"> <i class="fa-sharp-duotone fa-solid fa-phone"></i></a>
+        <a href="mailto:bhavatariniselvan@gmail.com" class="buttonphone"><i class="fa-sharp-duotone fa-solid fa-envelope"></i></a>
+       
+        <a href="https://github.com/bhavatarini-08"  target="_blank" class="btn-github"rel="noopener noreferrer"><i class="fa-sharp-duotone fa-solid fa-user"></i></a>
+
     </div>
+  
+   
+
     
     
 </body>
