@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .red
+        {
+            background-color: red;
+        }
+        .blue{
+            background-color: blue;
+        }
+        .purple{
+            background-color: blueviolet;
+        }
+        .green{
+            background-color: green;
+        }
+        .black{
+            background-color: black;
+        }
+        @media only screen and (max-width:600px) {
+            .blue{
+            background-color: rgb(116, 116, 208);
+        }
+        .purple{
+            background-color: rgb(173, 126, 218);
+        }
+        .red
+        {
+            background-color: rgb(219, 142, 142);
+        }
+        .green{
+            background-color: rgb(142, 224, 142);
+        }
+        .black{
+            background-color: rgb(70, 53, 53);
+        }
+        }
+        .container{
+            height: 100%;
+            width: 100%;
+            display:grid;
+            grid-template-columns:repeat(5,auto);
+            grid-template-rows: 100px 100px 100px 100px 100px;
+            gap: 2px;
+        }
+        .red{
+            grid-column: 1/6;
+
+        }
+        .purple{
+            grid-row: 2/5;
+        }
+        .green{
+            grid-column: -6/-1;
+            grid-row: 5/6;
+        }
+        .blue{
+            grid-column: 2/5;
+            grid-row: 2/5;
+        }
+        .black{
+            grid-row: 2/5;
+        }
+        /*key frames*/
+        @keyframes myanimation{
+            /* from{
+                transform: translateX(-100%);
+            }
+            to{
+                transform: translateX(0%);
+            } */
+             /* 0%{
+                transform: translateX(-100%);
+                rotate:90deg;
+                scale:0%
+             }
+             50%{
+                transform: translateX(0%);
+                rotate:180deg;
+                scale:50%
+             }
+             100%{
+                transform: translateX(100%);
+                rotate: 360deg;
+                scale:100%
+             }*/
+             from{
+                transform: translateX(-100%);
+             }
+             to{
+                transform: translateX(0%);
+             }
+        }
+        .red{
+            animation: 5s myanimation ease-in infinite; /*if infinte given in ease-in it comes */
+        }
+        /*transition*/
+        .blue:hover{
+            background-color: orange;
+            transition: 0.8s background-color ease-in;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box red "></div>
+        <div class="box blue"></div>
+        <div class="box purple"></div>
+        <div class="box green"></div>
+        <div class="box black"></div>
+    </div>   
+</body>
+</html>
