@@ -67,6 +67,7 @@
         <form class="login-form" onsubmit="formdata(event)">
             <input type="text" name="name" id="name" placeholder="Name">
             <input type="email" name="" id="email" placeholder="Email">
+            <input type="number" name="" id="age" placeholder="Age">
             <input type="number" name="" id="number" placeholder="Phone">
             <input type="password" name="" id="password" placeholder="Password">
             <button type="submit" class="submit-btn">Register</button>
@@ -77,18 +78,32 @@
             e.preventDefault();
             let name = document.getElementById("name").value
             let email = document.getElementById("email").value
+            let age=document.getElementById("age")
             let number = document.getElementById("number").value
             let password = document.getElementById("password").value
-            console.log(name)
+            // console.log(name)
             // document.write(name)
+            if(name !=="" && email !=="" && number !==0 && password !=="" && age!==0){
+                if(name === "bbh" || email=== "bha@g.com" ){
+                
+                console.log("username already exists")
+
+            }
+            else{
+                console.log("success")
+            }
+        }   else{
+                console.log("empty field not allowed")
+            }
             const data = {
                 username: name,
                 useremail: email,
                 userphone: number,
-                userpassword: password
+                userpassword: password,
+                usertype: age >=18 ? 'Eligible' : 'Not eligible'
             }
-            const { username, useremail, userphone, userpassword } = data
-            console.log(useremail)
+            const { username, useremail, userphone, userpassword , usertype} = data
+            console.log(useremail,usertype)
         }
         let data1 = [1, 2, 3, 4]
         let data2 = ['a', 'b', 'c', 'd']
